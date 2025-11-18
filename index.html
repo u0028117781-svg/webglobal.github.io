@@ -1,1 +1,217 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GLOBALWEB SOLUCIONES DIGITALES – Catálogo</title>
+  <style>
+    :root {
+      --bg: linear-gradient(135deg, #d9f2e6, #b7e4c7); /* verde suave degradado */
+      --card: #ffffff; 
+      --text: #0f172a; 
+      --muted: #4b5563;
+      --accent: #22c55e; 
+      --border: #cbd5e1;
+    }
+    * { box-sizing: border-box; }
+    body { 
+      margin: 0; 
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: var(--bg); 
+      color: var(--text); 
+    }
+    header { 
+      padding: 80px 24px; 
+      text-align: center; 
+      background: linear-gradient(135deg, #22c55e, #16a34a);
+      color: #fff;
+    }
+    header h1 { 
+      margin: 0 0 12px; 
+      font-size: 2.5rem; 
+      text-transform: uppercase; 
+      letter-spacing: 2px;
+      animation: fadeInDown 1s ease;
+    }
+    header p { 
+      margin: 0 auto; 
+      max-width: 720px; 
+      color: #e5e7eb; 
+      font-size: 1.1rem;
+      animation: fadeInUp 1.5s ease;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+    .section-title { 
+      margin: 36px 0 24px; 
+      font-size: 1.6rem; 
+      text-align: center; 
+      color: #065f46;
+      position: relative;
+    }
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+    .grid, .packs { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 24px; 
+    }
+    .card { 
+      background: var(--card); 
+      border: 1px solid var(--border); 
+      border-radius: 16px; 
+      padding: 24px; 
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1); 
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .card h3 { 
+      margin: 0 0 12px; 
+      font-size: 1.3rem; 
+      text-transform: uppercase; 
+      color: #065f46;
+    }
+    .price { 
+      color: var(--accent); 
+      font-weight: 700; 
+      margin-bottom: 12px; 
+      font-size: 1.1rem;
+    }
+    .meta { 
+      color: var(--muted); 
+      font-size: 0.95rem; 
+      margin-bottom: 12px; 
+    }
+    ul { margin: 8px 0 0; padding-left: 18px; }
+    footer { 
+      text-align: center; 
+      color: var(--muted); 
+      padding: 32px; 
+      border-top: 1px solid var(--border); 
+      background: #f0fdf4;
+    }
+    .cta {
+      text-align: center;
+      margin: 40px 0;
+ 
+    }
+    .btn:hover {
+      background: #16a34a;
+      transform: scale(1.05);
+    }
+    /* Animaciones */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GLOBALWEB SOLUCIONES DIGITALES</h1>
+    <p>Diseños modernos, optimizados y listos para atraer clientes y potenciar tu marca digital.</p>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Diseño y desarrollo web</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Diseño web corporativo simple</h3>
+        <div class="price">Desde 1.400 €</div>
+        <p class="meta">Sitios profesionales con diseño personalizado y responsive.</p>
+      </div>
+
+      <div class="card">
+        <h3>Diseño web corporativo complejo</h3>
+        <div class="price">Desde 1.800 €</div>
+        <p class="meta">Integración con redes sociales y formularios de contacto.</p>
+        <ul>
+          <li>Hosting y dominio opcional</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Tienda online (e-commerce)</h3>
+        <div class="price">Desde 2.200 €</div>
+        <p class="meta">Venta 24/7, pasarelas seguras y panel de administración.</p>
+        <ul>
+          <li>Hasta 50 productos iniciales</li>
+          <li>Chat en línea y carrito de compras</li>
+          <li>Configuración de envíos y descuentos</li>
+        </ul>
+      </div>
+
+      <div class="card landing-card">
+        <h3>Landing Pages</h3>
+        <div class="price">Desde 1.000 € al mes</div>
+        <p class="meta">Diseño atractivo y enfocado en conversión.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Servicios continuos</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Actualización de páginas</h3>
+        <div class="price">Desde 800 € al mes</div>
+        <ul>
+          <li>Modificar o agregar contenido</li>
+          <li>Mejora de estructura</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Mantenimiento y soporte web</h3>
+        <div class="price">Desde 200 € al mes</div>
+        <ul>
+          <li>Actualizaciones mensuales</li>
+          <li>Copias de respaldo</li>
+          <li>Soporte técnico</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Redes sociales</h3>
+        <div class="price">Desde 45 € al mes</div>
+        <ul>
+          <li>Promoción corporativa</li>
+          <li>Interacción con clientes</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="section-title">Packs de oferta</h2>
+    <div class="packs">
+      <div class="card">
+        <h3>Mantenimiento web + redes sociales</h3>
+        <div class="price">Desde 220 € al mes</div>
+      </div>
+      <div class="card">
+        <h3>Página simple + landing page</h3>
+        <div class="price">Desde 2.200 €</div>
+      </div>
+    </div>
+
+    <div class="cta">
+    
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 GLOBALWEB. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
 
