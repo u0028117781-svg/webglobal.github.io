@@ -23,41 +23,67 @@
     ul { margin: 8px 0 0; padding-left: 18px; }
     .section-title { margin: 36px 0 16px; font-size: 1.4rem; }
     .packs { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-    .cta { text-align: center; margin: 40px 0 60px; }
-    .btn { display: inline-block; padding: 12px 20px; background: var(--accent); color: #0a0f1f;
-           border-radius: 10px; text-decoration: none; font-weight: 700; }
+    .order-form { margin-top: 40px; }
     footer { text-align: center; color: var(--muted); padding: 24px; border-top: 1px solid var(--border); }
+    .landing-card { grid-column: 2; justify-self: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GLOBALWEB SOLUCIONES DIGITALES</h1>
+    <p>Configura espacios virtuales y sitios modernos, funcionales y optimizados para atraer clientes y potenciar marcas digitales, adaptados a todas las plataformas.</p>
+  </header>
 
-    /* Landing en segunda columna */
-    .landing-card {
-      grid-column: 2;
-      justify-self: center;
-    }
+  <main class="container">
+    <h2 class="section-title">Diseño y desarrollo web</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Diseño web corporativo simple</h3>
+        <div class="price">Desde 1.400 € (precio único)</div>
+        <p class="meta">Sitios profesionales con diseño personalizado y responsive.</p>
+      </div>
 
-    /* Formulario */
-    .order-form {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    .order-form h3 {
-      margin-bottom: 12px;
-      text-transform: uppercase;
-    }
-    .order-form label {
-      display: block;
-      margin: 8px 0 4px;
-    }
-    .order-form input, .order-form textarea {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 12px;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-    }
-    .order-form button {
-      background: var(--accent);
-      color: #0a0f1f;
-      padding: 10
+      <div class="card">
+        <h3>Diseño web corporativo complejo</h3>
+        <div class="price">Desde 1.800 € (precio único)</div>
+        <p class="meta">Integración con redes sociales y formularios de contacto.</p>
+        <ul>
+          <li>Hosting y dominio (opcional)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Tienda online (e-commerce)</h3>
+        <div class="price">Desde 2.200 € (precio único)</div>
+        <p class="meta">Venta 24/7, pasarelas seguras y panel de administración.</p>
+        <ul>
+          <li>Hasta 50 productos iniciales</li>
+          <li>Chat en línea y carrito de compras</li>
+          <li>Configuración de envíos y descuentos</li>
+          <li>Servicios avanzados opcionales</li>
+        </ul>
+      </div>
+
+      <div class="card landing-card">
+        <h3>LANDING PAGES (PÁGINAS DE CAPTURA)</h3>
+        <div class="price">Desde 1.000 € al mes</div>
+        <p class="meta">Diseño atractivo y enfocado en conversión.</p>
+        <ul>
+          <li>Integración con servicios de comercialización adicionales</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="section-title">Servicios continuos</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Actualización de páginas ya creadas</h3>
+        <div class="price">Desde 800 € al mes</div>
+        <ul>
+          <li>Modificar o agregar contenido</li>
+          <li>Ampliación o mejora de estructura</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Mantenimiento y soporte web</h3>
