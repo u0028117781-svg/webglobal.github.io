@@ -12,11 +12,6 @@
       --accent: #22c55e; 
       --border: #cbd5e1;
     }
-    /* Landing en segunda columna */
-    .landing-card {
-      grid-column: 2;
-      justify-self: center;
-    }
     * { box-sizing: border-box; }
     body { 
       margin: 0; 
@@ -35,14 +30,12 @@
       font-size: 2.5rem; 
       text-transform: uppercase; 
       letter-spacing: 2px;
-      animation: fadeInDown 1s ease;
     }
     header p { 
       margin: 0 auto; 
       max-width: 720px; 
       color: #e5e7eb; 
       font-size: 1.1rem;
-      animation: fadeInUp 1.5s ease;
     }
     .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
     .section-title { 
@@ -61,10 +54,20 @@
       margin: 8px auto 0;
       border-radius: 2px;
     }
-    .grid, .packs { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-      gap: 24px; 
+    /* cuadrícula de diseño web: siempre dos columnas en escritorio */
+    .grid-web {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    /* responsive: en pantallas pequeñas, una sola columna */
+    @media (max-width: 768px) {
+      .grid-web {
+        grid-template-columns: 1fr;
+      }
+      .landing-card {
+        grid-column: auto; /* se adapta en móvil */
+      }
     }
     .card { 
       background: var(--card); 
@@ -73,7 +76,6 @@
       padding: 24px; 
       box-shadow: 0 6px 12px rgba(0,0,0,0.1); 
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
     }
     .card:hover {
       transform: translateY(-6px);
@@ -97,6 +99,11 @@
       margin-bottom: 12px; 
     }
     ul { margin: 8px 0 0; padding-left: 18px; }
+    .packs { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+      gap: 24px; 
+    }
     footer { 
       text-align: center; 
       color: var(--muted); 
@@ -104,18 +111,9 @@
       border-top: 1px solid var(--border); 
       background: #f0fdf4;
     }
-    .cta {
-      text-align: center;
-      margin: 40px 0;
-    }
-    /* Animaciones */
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .landing-card {
+      grid-column: 2; /* fuerza segunda columna en escritorio */
+      justify-self: start;
     }
   </style>
 </head>
@@ -127,7 +125,7 @@
 
   <main class="container">
     <h2 class="section-title">Diseño y desarrollo web</h2>
-    <div class="grid">
+    <div class="grid-web">
       <div class="card">
         <h3>Diseño web corporativo simple</h3>
         <div class="price">Desde 1.400 €</div>
@@ -154,7 +152,7 @@
         </ul>
       </div>
 
-     <!-- Forzado a segunda columna -->
+      <!-- Landing en segunda columna -->
       <div class="card landing-card">
         <h3>Landing Pages</h3>
         <div class="price">Desde 1.000 € al mes</div>
@@ -204,9 +202,6 @@
         <div class="price">Desde 2.200 €</div>
       </div>
     </div>
-
-    <div class="cta">
-      </div>
   </main>
 
   <footer>
