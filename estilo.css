@@ -1,0 +1,35 @@
+body {
+  /* Fondo azul matizado con degradado elegante */
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+
+  /* Tipografía llamativa y moderna */
+  font-family: "Montserrat", "Oswald", "Arial Black", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.6;
+
+  /* Marco formal */
+  margin: 0;
+  padding: 40px;
+  border: 8px solid #0d1b2a;   /* azul oscuro elegante */
+  border-radius: 15px;          /* esquinas redondeadas */
+  box-shadow: 0 0 25px rgba(0,0,0,0.5); /* sombra envolvente */
+}
+
+/* Encabezados llamativos */
+h1, h2 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Oswald", sans-serif;
+  color: #f1c40f; /* dorado para destacar */
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+
+}
+
+/* Secciones destacadas */
+.section {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  margin
